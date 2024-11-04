@@ -13,7 +13,7 @@ export class AddArticleComponent {
 
   addArticle(titleInput: HTMLInputElement, photoInput: HTMLInputElement, descriptionInput: HTMLTextAreaElement) {
     const newArticle: Article = {
-      id: 0, // The ID will be set in ArticleListComponent
+      id: 0,
       title: titleInput.value,
       photo: photoInput.value,
       publicationDate: new Date(),
@@ -23,7 +23,7 @@ export class AddArticleComponent {
 
     this.articleAdded.emit(newArticle);
 
-    // Reset form fields
+   
     titleInput.value = '';
     photoInput.value = '';
     descriptionInput.value = '';
