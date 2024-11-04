@@ -21,7 +21,7 @@ export class ArticleListComponent implements OnInit {
   ];
   searchText: string = '';
   showAddArticleForm: boolean = false;
-  nextId: number = 3; // Start ID counter from the next number
+  nextId: number = 3;
 
   ngOnInit() {
     this.sortArticles();
@@ -53,7 +53,7 @@ export class ArticleListComponent implements OnInit {
   }
 
   addArticle(newArticle: Article) {
-    newArticle.id = this.nextId++; // Assign and increment nextId for uniqueness
+    newArticle.id = this.nextId++;
     this.articles.push(newArticle);
     this.sortArticles();
     this.showAddArticleForm = false;
